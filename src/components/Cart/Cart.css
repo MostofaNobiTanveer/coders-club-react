@@ -1,0 +1,132 @@
+.cart__btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--clr-primary-5);
+  color: var(--clr-white);
+  box-shadow: var(--light-shadow);
+  width: 5rem;height: 5rem;
+  font-size: 1.5rem;
+
+  border-radius: 15px 0;
+
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+}
+
+.cart__content {
+  border-left: 1px solid var(--clr-grey-9);
+  width: 100%;
+  max-width: 30rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: var(--clr-white);
+  pointer-events: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+  will-change: transform;
+  contain: paint;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.open {
+  transform: translateX(0);
+}
+.cart__header {
+  border-bottom: 1px solid var(--clr-grey-9);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__header span {
+  padding: 0 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.cart__cost {
+  border-bottom: 1px solid var(--clr-grey-9);
+  padding: 1.5rem 1rem;
+}
+.cart__cost h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+}
+.btn__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  border-left: 1px solid var(--clr-grey-9);
+  height: 100%;
+  width: 5rem;
+}
+.btn__close:hover {
+  background-color: var(--clr-grey-9);
+}
+
+.cart__body {
+  flex:1;
+  height: 100%;
+  width: 100%;
+  pointer-events: all;
+  overflow-y: scroll;
+}
+.cart__body::-webkit-scrollbar {
+  width: 0;
+}
+.cart__body ul {
+  display: flex;
+  flex-direction: column;
+}
+.cart__item {
+border-bottom: 1px solid var(--clr-grey-9);
+/* padding: 1rem; */
+display: flex;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+}
+.item__info {
+  display: flex;
+  gap:1rem;
+  align-items: center;
+  padding: 0 .5rem;
+}
+.item__info p {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--clr-grey-4);
+}
+.item__remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 1.5rem;
+  border-left: 1px solid var(--clr-grey-9);
+  height: 100%;
+  width: 5rem;
+}
+.item__remove:hover {
+  background-color: var(--clr-red-light);
+  color: var(--clr-white);
+}
+.item__img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
